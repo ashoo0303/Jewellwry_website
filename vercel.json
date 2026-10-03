@@ -4,9 +4,13 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "redirects": [
-    { "source": "/about.html", "destination": "/pages/about.html", "permanent": true },
-    { "source": "/contact.html", "destination": "/pages/contact.html", "permanent": true },
-    { "source": "/signin.html", "destination": "/pages/signin.html", "permanent": true },
-    { "source": "/signup.html", "destination": "/pages/signup.html", "permanent": true }
+    { "source": "/about.html", "destination": "/src/pages/about.html", "permanent": true },
+    { "source": "/contact.html", "destination": "/src/pages/contact.html", "permanent": true },
+    { "source": "/signin.html", "destination": "/src/pages/signin.html", "permanent": true },
+    { "source": "/signup.html", "destination": "/src/pages/signup.html", "permanent": true },
+    { "source": "/pages/about.html", "destination": "/src/pages/about.html", "permanent": true },
+    { "source": "/pages/contact.html", "destination": "/src/pages/contact.html", "permanent": true },
+    { "source": "/pages/signin.html", "destination": "/src/pages/signin.html", "permanent": true },
+    { "source": "/pages/signup.html", "destination": "/src/pages/signup.html", "permanent": true }
   ]
 }

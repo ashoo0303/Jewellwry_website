@@ -1,11 +1,11 @@
-import { mkdir, readdir, readFile, unlink, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rm, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const partialsDir = path.join(root, "src", "partials");
-const pagesDir = path.join(root, "src", "pages");
-const outPagesDir = path.join(root, "pages");
+const contentDir = path.join(root, "src", "content");
+const outPagesDir = path.join(root, "src", "pages");
 
 const NAV_KEYS = ["home", "about", "contact", "signin", "signup"];
 const NESTED_PAGES = ["about.html", "contact.html", "signin.html", "signup.html"];
@@ -47,8 +47,8 @@ function applyActive(html, active) {
 }
 
 function rewritePaths(html, nested) {
-  const toRoot = nested ? "../" : "";
-  const toPages = nested ? "" : "pages/";
+  const toRoot = nested ? "../../" : "";
+  const toPages = nested ? "" : "src/pages/";
   let out = html.replace(/(href|src)="assets\//g, `$1="${toRoot}assets/`);
   out = out.replace(/href="index\.html/g, `href="${toRoot}index.html`);
   for (const name of NESTED_PAGES) {
@@ -70,16 +70,16 @@ async function main() {
     ),
   );
 
-  const files = (await readdir(pagesDir)).filter((f) => f.endsWith(".html"));
+  const files = (await readdir(contentDir)).filter((f) => f.endsWith(".html"));
 
   for (const file of files) {
     const nested = file !== "index.html";
-    const { meta, body } = parseMeta(await read(path.join(pagesDir, file)));
+    const { meta, body } = parseMeta(await read(path.join(contentDir, file)));
     if (!meta.title || !meta.description) {
       throw new Error(`${file}: missing data-title or data-description on <main>`);
     }
 
-    const toRoot = nested ? "../" : "";
+    const toRoot = nested ? "../../" : "";
     const page = [
       "<!doctype html>",
       '<html lang="en">',
@@ -102,17 +102,16 @@ async function main() {
     const output = rewritePaths(expandIcons(applyActive(page, meta.active)), nested);
     const dest = nested ? path.join(outPagesDir, file) : path.join(root, file);
     await writeFile(dest, output, "utf8");
-    console.log(`built ${nested ? "pages/" : ""}${file}`);
+    console.log(`built ${nested ? "src/pages/" : ""}${file}`);
   }
 
-  for (const file of NESTED_PAGES) {
-    try {
-      await unlink(path.join(root, file));
-      console.log(`removed root ${file}`);
-    } catch (error) {
-      if (error.code !== "ENOENT") throw error;
-    }
+  try {
+    await unlink(path.join(outPagesDir, "index.html"));
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
   }
+
+  await rm(path.join(root, "pages"), { recursive: true, force: true });
 }
 
 main().catch((error) => {

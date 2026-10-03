@@ -2,35 +2,27 @@
 
 A professional five-page, responsive jewellery website built with **HTML5** and **Tailwind CSS v4** (Web Technologies - Assignment 01).
 
-| Page    | File                    | Purpose                                                              |
-| ------- | ----------------------- | -------------------------------------------------------------------- |
-| Home    | `index.html`            | Hero, categories, filterable bestsellers, bridal offer, reviews      |
-| About   | `pages/about.html`      | Brand story, stats, values, timeline, process, team, FAQ             |
-| Contact | `pages/contact.html`    | Working contact form (Formspree), hours, map, FAQ                    |
-| Sign In | `pages/signin.html`     | Sign-in form with validation and password toggle                     |
-| Sign Up | `pages/signup.html`     | Registration form with live password-strength meter                  |
+| Page    | File                       | Purpose                                                              |
+| ------- | -------------------------- | -------------------------------------------------------------------- |
+| Home    | `index.html`               | Hero, categories, filterable bestsellers, bridal offer, reviews      |
+| About   | `src/pages/about.html`     | Brand story, stats, values, timeline, process, team, FAQ             |
+| Contact | `src/pages/contact.html`   | Working contact form (Formspree), hours, map, FAQ                    |
+| Sign In | `src/pages/signin.html`    | Sign-in form with validation and password toggle                     |
+| Sign Up | `src/pages/signup.html`    | Registration form with live password-strength meter                  |
 
 ## Project structure
 
 ```
 .
 ├── index.html              <- home page (only HTML file at the root)
-├── pages/                  <- About, Contact, Sign In, Sign Up
 ├── assets/
-│   ├── css/
-│   │   ├── input.css
-│   │   └── styles.css
-│   ├── js/main.js
-│   ├── images/
-│   └── favicon.svg
 ├── src/
+│   ├── pages/              <- About, Contact, Sign In, Sign Up
 │   ├── partials/           <- shared navbar, footer, head
-│   └── pages/              <- page content used by the build script
+│   └── content/            <- page bodies used by the build script
 ├── scripts/build-pages.mjs
 └── package.json
 ```
-
-The navbar and footer live **once** in `src/partials/` and are injected into every page by the build script. Only `index.html` is generated at the project root; the other pages are written to `pages/`.
 
 ## Run locally
 

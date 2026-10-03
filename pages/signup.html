@@ -9,15 +9,15 @@
   <meta property="og:title" content="Create Account | Aurelia Jewels">
   <meta property="og:description" content="Create your free Aurelia Jewels account for order tracking, a saved wishlist, birthday offers and early access to new jewellery collections.">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 
-<body class="flex min-h-screen flex-col">
+<body class="flex min-h-screen flex-col" data-root="../">
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
   <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9l4-6Z"/><path d="M2 9h20M9 3 7 9l5 12M15 3l2 6-5 12"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
@@ -72,14 +72,14 @@
 
 <header id="site-header" class="sticky top-0 z-50 border-b border-ink-100 bg-ivory/90 backdrop-blur-md transition-shadow">
   <nav class="container-x flex h-16 items-center justify-between gap-4 lg:h-20" aria-label="Primary">
-    <a href="index.html" class="flex items-center gap-2.5" aria-label="Aurelia Jewels home">
+    <a href="../index.html" class="flex items-center gap-2.5" aria-label="Aurelia Jewels home">
       <span class="grid size-10 place-items-center rounded-full bg-ink-950 text-gold-400"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-gem"/></svg></span>
       <span class="font-serif text-xl font-semibold tracking-wide text-ink-900">Aurelia<span class="text-gold-600"> Jewels</span></span>
     </a>
 
     <ul class="hidden items-center gap-8 lg:flex">
-      <li><a href="index.html" class="nav-link " >Home</a></li>
-      <li><a href="index.html#collections" class="nav-link">Collections</a></li>
+      <li><a href="../index.html" class="nav-link " >Home</a></li>
+      <li><a href="../index.html#collections" class="nav-link">Collections</a></li>
       <li><a href="about.html" class="nav-link " >About</a></li>
       <li><a href="contact.html" class="nav-link " >Contact</a></li>
     </ul>
@@ -102,8 +102,8 @@
 
   <div id="mobile-menu" class="hidden border-t border-ink-100 bg-ivory lg:hidden">
     <ul class="container-x space-y-1 py-4">
-      <li><a href="index.html" class="mobile-link " >Home</a></li>
-      <li><a href="index.html#collections" class="mobile-link">Collections</a></li>
+      <li><a href="../index.html" class="mobile-link " >Home</a></li>
+      <li><a href="../index.html#collections" class="mobile-link">Collections</a></li>
       <li><a href="about.html" class="mobile-link " >About</a></li>
       <li><a href="contact.html" class="mobile-link " >Contact</a></li>
       <li class="grid grid-cols-2 gap-3 pt-3">
@@ -122,7 +122,7 @@
     <div class="container-x relative">
       <nav aria-label="Breadcrumb" class="mb-6">
         <ol class="flex items-center gap-2 text-sm text-ink-500">
-          <li><a href="index.html" class="transition hover:text-gold-700">Home</a></li>
+          <li><a href="../index.html" class="transition hover:text-gold-700">Home</a></li>
           <li aria-hidden="true"><svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-right"/></svg></li>
           <li class="font-medium text-ink-900" aria-current="page">Sign Up</li>
         </ol>
@@ -131,7 +131,7 @@
       <div class="reveal card mx-auto grid max-w-6xl overflow-hidden lg:grid-cols-12">
 
         <div class="relative hidden bg-ink-950 lg:order-first lg:col-span-5 lg:block">
-          <img src="assets/images/jewelry-set-green-2.jpg" alt="Gold jewellery set displayed on velvet stands" class="absolute inset-0 size-full object-cover opacity-50" fetchpriority="high">
+          <img src="../assets/images/jewelry-set-green-2.jpg" alt="Gold jewellery set displayed on velvet stands" class="absolute inset-0 size-full object-cover opacity-50" fetchpriority="high">
           <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/60 to-ink-950/20"></div>
           <div class="relative flex h-full flex-col justify-end p-10">
             <span class="badge self-start border border-gold-400/40 bg-gold-400/10 text-gold-300"><svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-sparkles"/></svg> Join the Aurelia circle</span>
@@ -255,7 +255,7 @@
 <footer class="mt-auto bg-ink-950 text-ink-300">
   <div class="container-x grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12">
     <div class="lg:col-span-4">
-      <a href="index.html" class="flex items-center gap-2.5" aria-label="Aurelia Jewels home">
+      <a href="../index.html" class="flex items-center gap-2.5" aria-label="Aurelia Jewels home">
         <span class="grid size-10 place-items-center rounded-full bg-gold-500 text-ink-950"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-gem"/></svg></span>
         <span class="font-serif text-xl font-semibold tracking-wide text-white">Aurelia<span class="text-gold-400"> Jewels</span></span>
       </a>
@@ -272,7 +272,7 @@
     <nav class="lg:col-span-2" aria-label="Pages">
       <h2 class="font-sans text-xs font-semibold uppercase tracking-[0.22em] !text-white">Explore</h2>
       <ul class="mt-5 space-y-3 text-sm">
-        <li><a href="index.html" class="transition hover:text-gold-300">Home</a></li>
+        <li><a href="../index.html" class="transition hover:text-gold-300">Home</a></li>
         <li><a href="about.html" class="transition hover:text-gold-300">About Us</a></li>
         <li><a href="contact.html" class="transition hover:text-gold-300">Contact</a></li>
         <li><a href="signin.html" class="transition hover:text-gold-300">Sign In</a></li>
@@ -283,11 +283,11 @@
     <nav class="lg:col-span-2" aria-label="Collections">
       <h2 class="font-sans text-xs font-semibold uppercase tracking-[0.22em] !text-white">Collections</h2>
       <ul class="mt-5 space-y-3 text-sm">
-        <li><a href="index.html#collections" class="transition hover:text-gold-300">Rings</a></li>
-        <li><a href="index.html#collections" class="transition hover:text-gold-300">Necklaces</a></li>
-        <li><a href="index.html#collections" class="transition hover:text-gold-300">Earrings</a></li>
-        <li><a href="index.html#collections" class="transition hover:text-gold-300">Bracelets</a></li>
-        <li><a href="index.html#bestsellers" class="transition hover:text-gold-300">Bestsellers</a></li>
+        <li><a href="../index.html#collections" class="transition hover:text-gold-300">Rings</a></li>
+        <li><a href="../index.html#collections" class="transition hover:text-gold-300">Necklaces</a></li>
+        <li><a href="../index.html#collections" class="transition hover:text-gold-300">Earrings</a></li>
+        <li><a href="../index.html#collections" class="transition hover:text-gold-300">Bracelets</a></li>
+        <li><a href="../index.html#bestsellers" class="transition hover:text-gold-300">Bestsellers</a></li>
       </ul>
     </nav>
 
@@ -322,7 +322,7 @@
     <span class="grid size-16 place-items-center rounded-full bg-gold-50 text-gold-600"><svg class="size-8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bag"/></svg></span>
     <p class="font-serif text-xl text-ink-900">Your bag is empty</p>
     <p class="text-sm text-ink-500">Discover handcrafted pieces and add your favourites here.</p>
-    <a href="index.html#bestsellers" class="btn btn-dark" data-cart-close>Browse bestsellers</a>
+    <a href="../index.html#bestsellers" class="btn btn-dark" data-cart-close>Browse bestsellers</a>
   </div>
 
   <ul id="cart-items" class="hidden flex-1 space-y-4 overflow-y-auto px-6 py-5"></ul>
@@ -344,6 +344,6 @@
   <svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-up"/></svg>
 </button>
 
-<script src="assets/js/main.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>

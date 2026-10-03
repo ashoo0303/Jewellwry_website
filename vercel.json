@@ -2,5 +2,11 @@
   "framework": null,
   "installCommand": null,
   "buildCommand": "",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    { "source": "/about.html", "destination": "/pages/about.html", "permanent": true },
+    { "source": "/contact.html", "destination": "/pages/contact.html", "permanent": true },
+    { "source": "/signin.html", "destination": "/pages/signin.html", "permanent": true },
+    { "source": "/signup.html", "destination": "/pages/signup.html", "permanent": true }
+  ]
 }

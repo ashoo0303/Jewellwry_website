@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sign In | Aurelia Jewels</title>
-  <meta name="description" content="Sign in to your Aurelia Jewels account to track orders, manage your wishlist and enjoy early access to new collections.">
+  <title>Contact Us | Aurelia Jewels</title>
+  <meta name="description" content="Get in touch with Aurelia Jewels. Book a private viewing, request a custom design, or ask about an order. Visit our Lahore showroom or send us a message.">
   <meta name="theme-color" content="#0d0c0a">
-  <meta property="og:title" content="Sign In | Aurelia Jewels">
-  <meta property="og:description" content="Sign in to your Aurelia Jewels account to track orders, manage your wishlist and enjoy early access to new collections.">
+  <meta property="og:title" content="Contact Us | Aurelia Jewels">
+  <meta property="og:description" content="Get in touch with Aurelia Jewels. Book a private viewing, request a custom design, or ask about an order. Visit our Lahore showroom or send us a message.">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 
-<body class="flex min-h-screen flex-col">
+<body class="flex min-h-screen flex-col" data-root="../">
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
   <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9l4-6Z"/><path d="M2 9h20M9 3 7 9l5 12M15 3l2 6-5 12"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
@@ -72,20 +72,20 @@
 
 <header id="site-header" class="sticky top-0 z-50 border-b border-ink-100 bg-ivory/90 backdrop-blur-md transition-shadow">
   <nav class="container-x flex h-16 items-center justify-between gap-4 lg:h-20" aria-label="Primary">
-    <a href="index.html" class="flex items-center gap-2.5" aria-label="Aurelia Jewels home">
+    <a href="../index.html" class="flex items-center gap-2.5" aria-label="Aurelia Jewels home">
       <span class="grid size-10 place-items-center rounded-full bg-ink-950 text-gold-400"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-gem"/></svg></span>
       <span class="font-serif text-xl font-semibold tracking-wide text-ink-900">Aurelia<span class="text-gold-600"> Jewels</span></span>
     </a>
 
     <ul class="hidden items-center gap-8 lg:flex">
-      <li><a href="index.html" class="nav-link " >Home</a></li>
-      <li><a href="index.html#collections" class="nav-link">Collections</a></li>
+      <li><a href="../index.html" class="nav-link " >Home</a></li>
+      <li><a href="../index.html#collections" class="nav-link">Collections</a></li>
       <li><a href="about.html" class="nav-link " >About</a></li>
-      <li><a href="contact.html" class="nav-link " >Contact</a></li>
+      <li><a href="contact.html" class="nav-link is-active" aria-current="page">Contact</a></li>
     </ul>
 
     <div class="flex items-center gap-2 sm:gap-3">
-      <a href="signin.html" class="nav-link is-active hidden lg:inline-block" aria-current="page">Sign In</a>
+      <a href="signin.html" class="nav-link  hidden lg:inline-block" >Sign In</a>
       <a href="signup.html" class="btn btn-gold hidden !px-5 !py-2.5 lg:inline-flex " >Sign Up</a>
 
       <button type="button" id="cart-open" class="relative grid size-11 place-items-center rounded-full border border-ink-200 bg-white text-ink-800 transition hover:border-gold-500 hover:text-gold-700" aria-label="Open shopping bag">
@@ -102,111 +102,198 @@
 
   <div id="mobile-menu" class="hidden border-t border-ink-100 bg-ivory lg:hidden">
     <ul class="container-x space-y-1 py-4">
-      <li><a href="index.html" class="mobile-link " >Home</a></li>
-      <li><a href="index.html#collections" class="mobile-link">Collections</a></li>
+      <li><a href="../index.html" class="mobile-link " >Home</a></li>
+      <li><a href="../index.html#collections" class="mobile-link">Collections</a></li>
       <li><a href="about.html" class="mobile-link " >About</a></li>
-      <li><a href="contact.html" class="mobile-link " >Contact</a></li>
+      <li><a href="contact.html" class="mobile-link is-active" aria-current="page">Contact</a></li>
       <li class="grid grid-cols-2 gap-3 pt-3">
-        <a href="signin.html" class="btn btn-outline" aria-current="page">Sign In</a>
+        <a href="signin.html" class="btn btn-outline" >Sign In</a>
         <a href="signup.html" class="btn btn-gold" >Sign Up</a>
       </li>
     </ul>
   </div>
 </header>
 
-<main id="main" class="bg-sand" data-title="Sign In | Aurelia Jewels" data-description="Sign in to your Aurelia Jewels account to track orders, manage your wishlist and enjoy early access to new collections." data-active="signin">
+<main id="main" data-title="Contact Us | Aurelia Jewels" data-description="Get in touch with Aurelia Jewels. Book a private viewing, request a custom design, or ask about an order. Visit our Lahore showroom or send us a message." data-active="contact">
 
-  <section class="relative overflow-hidden py-10 sm:py-14 lg:py-16" aria-labelledby="signin-title">
-    <div class="pointer-events-none absolute -left-32 top-0 size-96 rounded-full bg-gold-200/50 blur-3xl" aria-hidden="true"></div>
-
-    <div class="container-x relative">
-      <nav aria-label="Breadcrumb" class="mb-6">
-        <ol class="flex items-center gap-2 text-sm text-ink-500">
-          <li><a href="index.html" class="transition hover:text-gold-700">Home</a></li>
+  <section class="relative overflow-hidden bg-ink-950" aria-labelledby="contact-title">
+    <div class="pointer-events-none absolute -left-24 -top-24 size-96 rounded-full bg-gold-500/20 blur-3xl" aria-hidden="true"></div>
+    <div class="container-x relative py-16 text-center sm:py-20 lg:py-24">
+      <nav aria-label="Breadcrumb" class="flex justify-center">
+        <ol class="flex items-center gap-2 text-sm text-ink-400">
+          <li><a href="../index.html" class="transition hover:text-gold-300">Home</a></li>
           <li aria-hidden="true"><svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-right"/></svg></li>
-          <li class="font-medium text-ink-900" aria-current="page">Sign In</li>
+          <li class="text-gold-300" aria-current="page">Contact</li>
         </ol>
       </nav>
+      <p class="eyebrow mt-8 !text-gold-300">We&rsquo;d love to hear from you</p>
+      <h1 id="contact-title" class="mx-auto mt-3 max-w-3xl text-4xl leading-tight !text-white sm:text-5xl lg:text-6xl">Let&rsquo;s talk jewellery</h1>
+      <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink-300 sm:text-lg">
+        Whether you are planning a proposal, a wedding or a thoughtful gift, our concierge team will reply within one working day.
+      </p>
+    </div>
+  </section>
 
-      <div class="reveal card mx-auto grid max-w-5xl overflow-hidden lg:grid-cols-2">
+  <section class="relative z-10 -mt-10 sm:-mt-12" aria-label="Ways to reach us">
+    <div class="container-x grid gap-5 md:grid-cols-3">
+      <article class="reveal card flex items-start gap-4 p-6">
+        <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-gold-50 text-gold-600"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-pin"/></svg></span>
+        <div>
+          <h2 class="text-lg">Visit the showroom</h2>
+          <p class="mt-1 text-sm leading-relaxed text-ink-600">118 Heritage Arcade, Gulberg III,<br>Lahore 54660, Pakistan</p>
+        </div>
+      </article>
+      <article class="reveal card flex items-start gap-4 p-6">
+        <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-gold-50 text-gold-600"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg></span>
+        <div>
+          <h2 class="text-lg">Call us</h2>
+          <p class="mt-1 text-sm leading-relaxed text-ink-600"><a href="tel:+923001234567" class="font-medium text-ink-900 hover:text-gold-700">+92 303 4427651</a><br>Mon&ndash;Sat, 11:00 &ndash; 20:00</p>
+        </div>
+      </article>
+      <article class="reveal card flex items-start gap-4 p-6">
+        <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-gold-50 text-gold-600"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg></span>
+        <div>
+          <h2 class="text-lg">Email us</h2>
+          <p class="mt-1 text-sm leading-relaxed text-ink-600"><a href="mailto:ayeshababar941@gmail.com" class="font-medium text-ink-900 hover:text-gold-700">ayeshababar941@gmail.com</a><br>Replies within 24 hours</p>
+        </div>
+      </article>
+    </div>
+  </section>
 
-        <div class="p-6 sm:p-10 lg:p-12">
-          <span class="grid size-12 place-items-center rounded-full bg-ink-950 text-gold-400"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-lock"/></svg></span>
-          <h1 id="signin-title" class="mt-6 text-3xl sm:text-4xl">Welcome back</h1>
-          <p class="mt-2 text-ink-600">Sign in to view your orders, wishlist and private offers.</p>
+  <section class="section" aria-labelledby="form-title">
+    <div class="container-x grid gap-10 lg:grid-cols-5">
 
-          <form class="mt-8 space-y-5" data-auth-form="signin" novalidate>
+      <div class="reveal card p-6 sm:p-10 lg:col-span-3">
+        <p class="eyebrow">Send a message</p>
+        <h2 id="form-title" class="mt-2 text-3xl">How can we help?</h2>
+        <p class="mt-2 text-ink-600">Fill in the form and a member of our team will get back to you personally.</p>
+
+        <form id="contact-form" class="mt-8 space-y-5" action="https://formspree.io/f/xyezrlrq" method="POST" data-ajax-form data-contact-form novalidate>
+          <input type="hidden" name="_subject" value="New enquiry from the Aurelia Jewels website">
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="grid gap-5 sm:grid-cols-2">
             <div>
-              <label for="signin-email" class="field-label">Email address</label>
-              <div class="relative">
-                <span class="pointer-events-none absolute inset-y-0 left-4 grid place-items-center text-ink-400"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg></span>
-                <input id="signin-email" name="email" type="email" class="field !pl-12" placeholder="you@example.com" autocomplete="email" required>
-              </div>
+              <label for="contact-name" class="field-label">Full name <span class="text-red-500">*</span></label>
+              <input id="contact-name" name="name" type="text" class="field" placeholder="e.g. Ayesha Khan" autocomplete="name" minlength="2" required>
+              <p class="field-error hidden" data-error-for="name"></p>
+            </div>
+            <div>
+              <label for="contact-email" class="field-label">Email address <span class="text-red-500">*</span></label>
+              <input id="contact-email" name="email" type="email" class="field" placeholder="you@example.com" autocomplete="email" required>
               <p class="field-error hidden" data-error-for="email"></p>
             </div>
+          </div>
 
+          <div class="grid gap-5 sm:grid-cols-2">
             <div>
-              <div class="flex items-center justify-between">
-                <label for="signin-password" class="field-label !mb-1.5">Password</label>
-                <a href="contact.html" class="mb-1.5 text-sm font-medium text-gold-700 hover:text-gold-800 hover:underline">Forgot password?</a>
-              </div>
-              <div class="relative">
-                <span class="pointer-events-none absolute inset-y-0 left-4 grid place-items-center text-ink-400"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-lock"/></svg></span>
-                <input id="signin-password" name="password" type="password" class="field !px-12" placeholder="Enter your password" autocomplete="current-password" minlength="8" required>
-                <button type="button" class="absolute inset-y-0 right-3 grid w-9 place-items-center rounded-full text-ink-400 transition hover:text-ink-900" data-toggle-password="signin-password" aria-label="Show password" aria-pressed="false">
-                  <span data-icon-show><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-eye"/></svg></span>
-                  <span data-icon-hide class="hidden"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-eye-off"/></svg></span>
-                </button>
-              </div>
-              <p class="field-error hidden" data-error-for="password"></p>
+              <label for="contact-phone" class="field-label">Phone <span class="font-normal text-ink-400">(optional)</span></label>
+              <input id="contact-phone" name="phone" type="tel" class="field" placeholder="+92 300 0000000" autocomplete="tel" pattern="[0-9+ \(\)\-]{7,20}">
+              <p class="field-error hidden" data-error-for="phone"></p>
             </div>
+            <div>
+              <label for="contact-topic" class="field-label">Enquiry type <span class="text-red-500">*</span></label>
+              <select id="contact-topic" name="topic" class="field" required>
+                <option value="">Select a topic</option>
+                <option>Private viewing / appointment</option>
+                <option>Bridal &amp; engagement</option>
+                <option>Custom design</option>
+                <option>Order or delivery support</option>
+                <option>Repairs &amp; resizing</option>
+                <option>Something else</option>
+              </select>
+              <p class="field-error hidden" data-error-for="topic"></p>
+            </div>
+          </div>
 
-            <label class="flex cursor-pointer items-center gap-3 text-sm text-ink-600">
-              <input type="checkbox" name="remember" class="size-4 rounded border-ink-300 accent-gold-600">
-              Keep me signed in on this device
+          <div>
+            <label for="contact-message" class="field-label">Your message <span class="text-red-500">*</span></label>
+            <textarea id="contact-message" name="message" rows="6" maxlength="1000" minlength="10" class="field resize-y" placeholder="Tell us about the piece, occasion or question you have in mind..." data-counter="message-count" required></textarea>
+            <div class="mt-1.5 flex items-start justify-between gap-4">
+              <p class="field-error hidden" data-error-for="message"></p>
+              <p class="ml-auto text-xs text-ink-400"><span id="message-count">0</span>/1000</p>
+            </div>
+          </div>
+
+          <div>
+            <label class="flex cursor-pointer items-start gap-3 text-sm text-ink-600">
+              <input type="checkbox" name="consent" value="yes" class="mt-0.5 size-4 rounded border-ink-300 accent-gold-600" required>
+              <span>I agree to be contacted by Aurelia Jewels about my enquiry. <span class="text-red-500">*</span></span>
             </label>
-
-            <div class="form-status hidden rounded-xl px-4 py-3 text-sm" role="status" aria-live="polite"></div>
-
-            <button type="submit" class="btn btn-gold w-full !py-3.5">Sign in <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
-          </form>
-
-          <div class="my-7 flex items-center gap-4 text-xs uppercase tracking-widest text-ink-400">
-            <span class="h-px flex-1 bg-ink-100"></span> or <span class="h-px flex-1 bg-ink-100"></span>
+            <p class="field-error hidden" data-error-for="consent"></p>
           </div>
 
-          <a href="index.html#bestsellers" class="btn btn-outline w-full">Continue shopping as a guest</a>
+          <div class="form-status hidden rounded-xl px-4 py-3 text-sm" role="status" aria-live="polite"></div>
 
-          <p class="mt-8 text-center text-sm text-ink-600">
-            New to Aurelia? <a href="signup.html" class="font-semibold text-gold-700 hover:text-gold-800 hover:underline">Create an account</a>
-          </p>
-        </div>
-
-        <div class="relative hidden min-h-[34rem] lg:block">
-          <img src="assets/images/ring-flowers.jpg" alt="Diamond ring in an open box surrounded by magenta flowers" class="absolute inset-0 size-full object-cover" fetchpriority="high">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/30 to-ink-950/10"></div>
-          <div class="absolute inset-x-0 bottom-0 p-10">
-            <span class="badge border border-gold-400/40 bg-gold-400/10 text-gold-300"><svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-sparkles"/></svg> Member benefits</span>
-            <blockquote class="mt-4 font-serif text-2xl leading-snug text-white">&ldquo;Every piece arrived exactly as promised &mdash; and the aftercare has been wonderful.&rdquo;</blockquote>
-            <p class="mt-3 text-sm text-ink-300">Ayesha K., client since 2021</p>
-          </div>
-        </div>
+          <button type="submit" class="btn btn-gold w-full sm:w-auto" data-submit-label="Send message">
+            Send message <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+        </form>
       </div>
 
-      <ul class="mx-auto mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">
-        <li class="reveal flex items-center gap-4 rounded-2xl border border-ink-100 bg-white/70 p-5">
-          <span class="grid size-11 shrink-0 place-items-center rounded-full bg-gold-50 text-gold-600"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-truck"/></svg></span>
-          <p class="text-sm text-ink-700"><strong class="block text-ink-900">Track every order</strong>Live status from workshop to doorstep.</p>
-        </li>
-        <li class="reveal flex items-center gap-4 rounded-2xl border border-ink-100 bg-white/70 p-5">
-          <span class="grid size-11 shrink-0 place-items-center rounded-full bg-gold-50 text-gold-600"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-heart"/></svg></span>
-          <p class="text-sm text-ink-700"><strong class="block text-ink-900">Save your wishlist</strong>Keep favourites across all devices.</p>
-        </li>
-        <li class="reveal flex items-center gap-4 rounded-2xl border border-ink-100 bg-white/70 p-5">
-          <span class="grid size-11 shrink-0 place-items-center rounded-full bg-gold-50 text-gold-600"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-gift"/></svg></span>
-          <p class="text-sm text-ink-700"><strong class="block text-ink-900">Private previews</strong>Early access to new collections.</p>
-        </li>
-      </ul>
+      <aside class="space-y-6 lg:col-span-2" aria-label="Showroom information">
+        <div class="reveal card p-7">
+          <h2 class="flex items-center gap-2 text-xl"><svg class="size-5 text-gold-600" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-clock"/></svg> Opening hours</h2>
+          <table class="mt-4 w-full text-sm">
+            <tbody class="divide-y divide-ink-100">
+              <tr><th scope="row" class="py-2.5 text-left font-medium text-ink-800">Monday &ndash; Thursday</th><td class="py-2.5 text-right text-ink-600">11:00 &ndash; 20:00</td></tr>
+              <tr><th scope="row" class="py-2.5 text-left font-medium text-ink-800">Friday</th><td class="py-2.5 text-right text-ink-600">14:00 &ndash; 21:00</td></tr>
+              <tr><th scope="row" class="py-2.5 text-left font-medium text-ink-800">Saturday</th><td class="py-2.5 text-right text-ink-600">11:00 &ndash; 21:00</td></tr>
+              <tr><th scope="row" class="py-2.5 text-left font-medium text-ink-800">Sunday</th><td class="py-2.5 text-right text-gold-700">By appointment</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="reveal flex items-start gap-3 rounded-2xl border border-gold-200 bg-gold-50 p-5 text-sm text-ink-700">
+          <svg class="size-5 shrink-0 text-gold-700" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-info"/></svg>
+          <p><strong class="text-ink-900">Planning a bridal visit?</strong> Book at least 3 days ahead so we can reserve a private lounge and prepare pieces for you.</p>
+        </div>
+
+        <div class="reveal card p-7">
+          <h2 class="text-xl">Prefer chat?</h2>
+          <p class="mt-2 text-sm text-ink-600">Message our concierge on WhatsApp for quick questions and photos of pieces.</p>
+          <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="btn mt-5 w-full bg-emerald-600 text-white hover:bg-emerald-700"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-whatsapp"/></svg> Chat on WhatsApp</a>
+          <div class="mt-6 border-t border-ink-100 pt-5">
+            <p class="text-xs font-semibold uppercase tracking-widest text-ink-400">Follow us</p>
+            <ul class="mt-3 flex gap-3">
+              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="grid size-10 place-items-center rounded-full border border-ink-200 text-ink-700 transition hover:border-gold-500 hover:text-gold-700" aria-label="Instagram"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="grid size-10 place-items-center rounded-full border border-ink-200 text-ink-700 transition hover:border-gold-500 hover:text-gold-700" aria-label="Facebook"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+              <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="grid size-10 place-items-center rounded-full border border-ink-200 text-ink-700 transition hover:border-gold-500 hover:text-gold-700" aria-label="Pinterest"><svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-pinterest"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="pb-16 sm:pb-20" aria-label="Showroom location">
+    <div class="container-x">
+      <div class="reveal overflow-hidden rounded-[2rem] border border-ink-100 shadow-soft">
+        <iframe title="Map showing the Aurelia Jewels showroom in Gulberg III, Lahore" src="https://www.google.com/maps?q=Gulberg+III+Lahore+Pakistan&amp;output=embed" class="h-80 w-full sm:h-96" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-sand" aria-labelledby="contact-faq-title">
+    <div class="container-x mx-auto max-w-3xl">
+      <div class="reveal text-center">
+        <p class="eyebrow">Quick answers</p>
+        <h2 id="contact-faq-title" class="section-title mt-3">Before you write to us</h2>
+      </div>
+      <div class="reveal mt-10 space-y-4">
+        <details class="faq-item">
+          <summary>How quickly will I get a reply?<svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+          <p class="mt-3 leading-relaxed text-ink-600">We respond to every enquiry within one working day, and usually within a few hours during showroom opening times.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I see a piece before I buy it?<svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+          <p class="mt-3 leading-relaxed text-ink-600">Yes &mdash; book a private viewing and we will have your selected pieces ready, or arrange a video consultation if you are out of town.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer repairs for jewellery bought elsewhere?<svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+          <p class="mt-3 leading-relaxed text-ink-600">We service most fine jewellery. Send us a photo through the form and we will give you an estimate before any work begins.</p>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -215,7 +302,7 @@
 <footer class="mt-auto bg-ink-950 text-ink-300">
   <div class="container-x grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12">
     <div class="lg:col-span-4">
-      <a href="index.html" class="flex items-center gap-2.5" aria-label="Aurelia Jewels home">
+      <a href="../index.html" class="flex items-center gap-2.5" aria-label="Aurelia Jewels home">
         <span class="grid size-10 place-items-center rounded-full bg-gold-500 text-ink-950"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-gem"/></svg></span>
         <span class="font-serif text-xl font-semibold tracking-wide text-white">Aurelia<span class="text-gold-400"> Jewels</span></span>
       </a>
@@ -232,7 +319,7 @@
     <nav class="lg:col-span-2" aria-label="Pages">
       <h2 class="font-sans text-xs font-semibold uppercase tracking-[0.22em] !text-white">Explore</h2>
       <ul class="mt-5 space-y-3 text-sm">
-        <li><a href="index.html" class="transition hover:text-gold-300">Home</a></li>
+        <li><a href="../index.html" class="transition hover:text-gold-300">Home</a></li>
         <li><a href="about.html" class="transition hover:text-gold-300">About Us</a></li>
         <li><a href="contact.html" class="transition hover:text-gold-300">Contact</a></li>
         <li><a href="signin.html" class="transition hover:text-gold-300">Sign In</a></li>
@@ -243,11 +330,11 @@
     <nav class="lg:col-span-2" aria-label="Collections">
       <h2 class="font-sans text-xs font-semibold uppercase tracking-[0.22em] !text-white">Collections</h2>
       <ul class="mt-5 space-y-3 text-sm">
-        <li><a href="index.html#collections" class="transition hover:text-gold-300">Rings</a></li>
-        <li><a href="index.html#collections" class="transition hover:text-gold-300">Necklaces</a></li>
-        <li><a href="index.html#collections" class="transition hover:text-gold-300">Earrings</a></li>
-        <li><a href="index.html#collections" class="transition hover:text-gold-300">Bracelets</a></li>
-        <li><a href="index.html#bestsellers" class="transition hover:text-gold-300">Bestsellers</a></li>
+        <li><a href="../index.html#collections" class="transition hover:text-gold-300">Rings</a></li>
+        <li><a href="../index.html#collections" class="transition hover:text-gold-300">Necklaces</a></li>
+        <li><a href="../index.html#collections" class="transition hover:text-gold-300">Earrings</a></li>
+        <li><a href="../index.html#collections" class="transition hover:text-gold-300">Bracelets</a></li>
+        <li><a href="../index.html#bestsellers" class="transition hover:text-gold-300">Bestsellers</a></li>
       </ul>
     </nav>
 
@@ -282,7 +369,7 @@
     <span class="grid size-16 place-items-center rounded-full bg-gold-50 text-gold-600"><svg class="size-8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bag"/></svg></span>
     <p class="font-serif text-xl text-ink-900">Your bag is empty</p>
     <p class="text-sm text-ink-500">Discover handcrafted pieces and add your favourites here.</p>
-    <a href="index.html#bestsellers" class="btn btn-dark" data-cart-close>Browse bestsellers</a>
+    <a href="../index.html#bestsellers" class="btn btn-dark" data-cart-close>Browse bestsellers</a>
   </div>
 
   <ul id="cart-items" class="hidden flex-1 space-y-4 overflow-y-auto px-6 py-5"></ul>
@@ -304,6 +391,6 @@
   <svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-up"/></svg>
 </button>
 
-<script src="assets/js/main.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>

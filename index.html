@@ -17,7 +17,7 @@
   <script>document.documentElement.classList.add("js");</script>
 </head>
 
-<body class="flex min-h-screen flex-col">
+<body class="flex min-h-screen flex-col" data-root="">
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
   <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9l4-6Z"/><path d="M2 9h20M9 3 7 9l5 12M15 3l2 6-5 12"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></symbol>
@@ -65,7 +65,7 @@
     <p class="hidden items-center gap-4 sm:flex">
       <a href="tel:+923001234567" class="flex items-center gap-1.5 hover:text-gold-300"><svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg> +92 303 4427651</a>
       <span class="h-3 w-px bg-ink-700" aria-hidden="true"></span>
-      <a href="contact.html" class="hover:text-gold-300">Book a private viewing</a>
+      <a href="pages/contact.html" class="hover:text-gold-300">Book a private viewing</a>
     </p>
   </div>
 </div>
@@ -80,13 +80,13 @@
     <ul class="hidden items-center gap-8 lg:flex">
       <li><a href="index.html" class="nav-link is-active" aria-current="page">Home</a></li>
       <li><a href="index.html#collections" class="nav-link">Collections</a></li>
-      <li><a href="about.html" class="nav-link " >About</a></li>
-      <li><a href="contact.html" class="nav-link " >Contact</a></li>
+      <li><a href="pages/about.html" class="nav-link " >About</a></li>
+      <li><a href="pages/contact.html" class="nav-link " >Contact</a></li>
     </ul>
 
     <div class="flex items-center gap-2 sm:gap-3">
-      <a href="signin.html" class="nav-link  hidden lg:inline-block" >Sign In</a>
-      <a href="signup.html" class="btn btn-gold hidden !px-5 !py-2.5 lg:inline-flex " >Sign Up</a>
+      <a href="pages/signin.html" class="nav-link  hidden lg:inline-block" >Sign In</a>
+      <a href="pages/signup.html" class="btn btn-gold hidden !px-5 !py-2.5 lg:inline-flex " >Sign Up</a>
 
       <button type="button" id="cart-open" class="relative grid size-11 place-items-center rounded-full border border-ink-200 bg-white text-ink-800 transition hover:border-gold-500 hover:text-gold-700" aria-label="Open shopping bag">
         <svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bag"/></svg>
@@ -104,11 +104,11 @@
     <ul class="container-x space-y-1 py-4">
       <li><a href="index.html" class="mobile-link is-active" aria-current="page">Home</a></li>
       <li><a href="index.html#collections" class="mobile-link">Collections</a></li>
-      <li><a href="about.html" class="mobile-link " >About</a></li>
-      <li><a href="contact.html" class="mobile-link " >Contact</a></li>
+      <li><a href="pages/about.html" class="mobile-link " >About</a></li>
+      <li><a href="pages/contact.html" class="mobile-link " >Contact</a></li>
       <li class="grid grid-cols-2 gap-3 pt-3">
-        <a href="signin.html" class="btn btn-outline" >Sign In</a>
-        <a href="signup.html" class="btn btn-gold" >Sign Up</a>
+        <a href="pages/signin.html" class="btn btn-outline" >Sign In</a>
+        <a href="pages/signup.html" class="btn btn-gold" >Sign Up</a>
       </li>
     </ul>
   </div>
@@ -131,7 +131,7 @@
         </p>
         <div class="mt-9 flex flex-col gap-3 sm:flex-row">
           <a href="#bestsellers" class="btn btn-gold">Shop bestsellers <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-          <a href="contact.html" class="btn btn-outline-light">Book a private viewing</a>
+          <a href="pages/contact.html" class="btn btn-outline-light">Book a private viewing</a>
         </div>
         <dl class="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
           <div>
@@ -412,8 +412,8 @@
           <li class="flex items-start gap-3"><span class="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-gold-500 text-white"><svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>Secure, insured storage until your wedding week</span></li>
         </ul>
         <div class="mt-10 flex flex-col gap-3 sm:flex-row">
-          <a href="contact.html" class="btn btn-dark">Book a consultation</a>
-          <a href="about.html" class="btn btn-outline">Our craftsmanship</a>
+          <a href="pages/contact.html" class="btn btn-dark">Book a consultation</a>
+          <a href="pages/about.html" class="btn btn-outline">Our craftsmanship</a>
         </div>
       </div>
     </div>
@@ -533,10 +533,10 @@
       <h2 class="font-sans text-xs font-semibold uppercase tracking-[0.22em] !text-white">Explore</h2>
       <ul class="mt-5 space-y-3 text-sm">
         <li><a href="index.html" class="transition hover:text-gold-300">Home</a></li>
-        <li><a href="about.html" class="transition hover:text-gold-300">About Us</a></li>
-        <li><a href="contact.html" class="transition hover:text-gold-300">Contact</a></li>
-        <li><a href="signin.html" class="transition hover:text-gold-300">Sign In</a></li>
-        <li><a href="signup.html" class="transition hover:text-gold-300">Sign Up</a></li>
+        <li><a href="pages/about.html" class="transition hover:text-gold-300">About Us</a></li>
+        <li><a href="pages/contact.html" class="transition hover:text-gold-300">Contact</a></li>
+        <li><a href="pages/signin.html" class="transition hover:text-gold-300">Sign In</a></li>
+        <li><a href="pages/signup.html" class="transition hover:text-gold-300">Sign Up</a></li>
       </ul>
     </nav>
 
@@ -593,7 +593,7 @@
       <strong id="cart-total" class="text-lg font-semibold text-ink-900">Rs. 0</strong>
     </div>
     <p class="mt-1 text-xs text-ink-500">Insured delivery is free above Rs. 50,000. Orders are confirmed with our concierge.</p>
-    <a href="contact.html?order=1#contact-form" class="btn btn-gold mt-4 w-full">Request this order <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+    <a href="pages/contact.html?order=1#contact-form" class="btn btn-gold mt-4 w-full">Request this order <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
     <button type="button" id="cart-clear" class="mt-2 w-full text-center text-xs font-medium text-ink-500 underline-offset-2 hover:text-ink-900 hover:underline">Clear bag</button>
   </div>
 </aside>

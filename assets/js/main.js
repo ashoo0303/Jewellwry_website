@@ -143,7 +143,8 @@
           li.className = "flex gap-4 rounded-2xl border border-ink-100 bg-white p-3";
 
           const img = document.createElement("img");
-          img.src = item.img;
+          const rootPrefix = document.body?.dataset.root ?? "";
+          img.src = item.img?.startsWith("http") || item.img?.startsWith("../") ? item.img : `${rootPrefix}${item.img}`;
           img.alt = "";
           img.className = "size-20 shrink-0 rounded-xl object-cover";
 

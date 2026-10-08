@@ -56,7 +56,7 @@
 </svg>
 
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-gold-500 focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
-<div class="bg-ink-950 text-xs text-ink-200">
+<aside class="bg-ink-950 text-xs text-ink-200" aria-label="Store announcements">
   <div class="container-x flex items-center justify-between gap-4 py-2">
     <p class="mx-auto flex items-center gap-2 sm:mx-0">
       <svg class="size-4 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-truck"/></svg>
@@ -68,7 +68,7 @@
       <a href="contact.html" class="hover:text-gold-300">Book a private viewing</a>
     </p>
   </div>
-</div>
+</aside>
 
 <header id="site-header" class="sticky top-0 z-50 border-b border-ink-100 bg-ivory/90 backdrop-blur-md transition-shadow">
   <nav class="container-x flex h-16 items-center justify-between gap-4 lg:h-20" aria-label="Primary">
@@ -100,7 +100,7 @@
     </div>
   </nav>
 
-  <div id="mobile-menu" class="hidden border-t border-ink-100 bg-ivory lg:hidden">
+  <nav id="mobile-menu" class="hidden border-t border-ink-100 bg-ivory lg:hidden" aria-label="Mobile">
     <ul class="container-x space-y-1 py-4">
       <li><a href="../../index.html" class="mobile-link " >Home</a></li>
       <li><a href="../../index.html#collections" class="mobile-link">Collections</a></li>
@@ -111,7 +111,7 @@
         <a href="signup.html" class="btn btn-gold" aria-current="page">Sign Up</a>
       </li>
     </ul>
-  </div>
+  </nav>
 </header>
 
 <main id="main" class="bg-sand" data-title="Create Account | Aurelia Jewels" data-description="Create your free Aurelia Jewels account for order tracking, a saved wishlist, birthday offers and early access to new jewellery collections." data-active="signup">
@@ -130,9 +130,11 @@
 
       <div class="reveal card mx-auto grid max-w-6xl overflow-hidden lg:grid-cols-12">
 
-        <div class="relative hidden bg-ink-950 lg:order-first lg:col-span-5 lg:block">
-          <img src="../../assets/images/jewelry-set-green-2.jpg" alt="Gold jewellery set displayed on velvet stands" class="absolute inset-0 size-full object-cover opacity-50" fetchpriority="high">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/60 to-ink-950/20"></div>
+        <aside class="relative hidden bg-ink-950 lg:order-first lg:col-span-5 lg:block" aria-label="Account benefits">
+          <figure class="absolute inset-0">
+            <img src="../../assets/images/jewelry-set-green-2.jpg" alt="Gold jewellery set displayed on velvet stands" class="absolute inset-0 size-full object-cover opacity-50" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/60 to-ink-950/20"></div>
+          </figure>
           <div class="relative flex h-full flex-col justify-end p-10">
             <span class="badge self-start border border-gold-400/40 bg-gold-400/10 text-gold-300"><svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-sparkles"/></svg> Join the Aurelia circle</span>
             <h2 class="mt-4 font-serif text-3xl leading-tight !text-white">Your account, your private jewellery box</h2>
@@ -151,7 +153,7 @@
               <p class="text-xs text-ink-300">Join 48,000+ happy clients</p>
             </div>
           </div>
-        </div>
+        </aside>
 
         <div class="p-6 sm:p-10 lg:col-span-7 lg:p-12">
           <span class="grid size-12 place-items-center rounded-full bg-ink-950 text-gold-400"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-user"/></svg></span>
@@ -291,7 +293,7 @@
       </ul>
     </nav>
 
-    <div class="lg:col-span-4">
+    <address class="lg:col-span-4 not-italic">
       <h2 class="font-sans text-xs font-semibold uppercase tracking-[0.22em] !text-white">Visit &amp; contact</h2>
       <ul class="mt-5 space-y-4 text-sm">
         <li class="flex gap-3"><svg class="size-5 shrink-0 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-pin"/></svg><span>118 Heritage Arcade, Gulberg III,<br>Lahore 54660, Pakistan</span></li>
@@ -299,7 +301,7 @@
         <li class="flex gap-3"><svg class="size-5 shrink-0 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:ayeshababar941@gmail.com" class="transition hover:text-gold-300">ayeshababar941@gmail.com</a></li>
         <li class="flex gap-3"><svg class="size-5 shrink-0 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-clock"/></svg><span>Mon&ndash;Sat: 11:00 &ndash; 20:00<br>Sunday: by appointment</span></li>
       </ul>
-    </div>
+    </address>
   </div>
 
   <div class="border-t border-ink-800">

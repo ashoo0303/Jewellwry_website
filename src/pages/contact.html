@@ -56,7 +56,7 @@
 </svg>
 
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-gold-500 focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
-<div class="bg-ink-950 text-xs text-ink-200">
+<aside class="bg-ink-950 text-xs text-ink-200" aria-label="Store announcements">
   <div class="container-x flex items-center justify-between gap-4 py-2">
     <p class="mx-auto flex items-center gap-2 sm:mx-0">
       <svg class="size-4 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-truck"/></svg>
@@ -68,7 +68,7 @@
       <a href="contact.html" class="hover:text-gold-300">Book a private viewing</a>
     </p>
   </div>
-</div>
+</aside>
 
 <header id="site-header" class="sticky top-0 z-50 border-b border-ink-100 bg-ivory/90 backdrop-blur-md transition-shadow">
   <nav class="container-x flex h-16 items-center justify-between gap-4 lg:h-20" aria-label="Primary">
@@ -100,7 +100,7 @@
     </div>
   </nav>
 
-  <div id="mobile-menu" class="hidden border-t border-ink-100 bg-ivory lg:hidden">
+  <nav id="mobile-menu" class="hidden border-t border-ink-100 bg-ivory lg:hidden" aria-label="Mobile">
     <ul class="container-x space-y-1 py-4">
       <li><a href="../../index.html" class="mobile-link " >Home</a></li>
       <li><a href="../../index.html#collections" class="mobile-link">Collections</a></li>
@@ -111,7 +111,7 @@
         <a href="signup.html" class="btn btn-gold" >Sign Up</a>
       </li>
     </ul>
-  </div>
+  </nav>
 </header>
 
 <main id="main" data-title="Contact Us | Aurelia Jewels" data-description="Get in touch with Aurelia Jewels. Book a private viewing, request a custom design, or ask about an order. Visit our Lahore showroom or send us a message." data-active="contact">
@@ -140,14 +140,14 @@
         <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-gold-50 text-gold-600"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-pin"/></svg></span>
         <div>
           <h2 class="text-lg">Visit the showroom</h2>
-          <p class="mt-1 text-sm leading-relaxed text-ink-600">118 Heritage Arcade, Gulberg III,<br>Lahore 54660, Pakistan</p>
+          <address class="mt-1 not-italic text-sm leading-relaxed text-ink-600">118 Heritage Arcade, Gulberg III,<br>Lahore 54660, Pakistan</address>
         </div>
       </article>
       <article class="reveal card flex items-start gap-4 p-6">
         <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-gold-50 text-gold-600"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg></span>
         <div>
           <h2 class="text-lg">Call us</h2>
-          <p class="mt-1 text-sm leading-relaxed text-ink-600"><a href="tel:+923001234567" class="font-medium text-ink-900 hover:text-gold-700">+92 303 4427651</a><br>Mon&ndash;Sat, 11:00 &ndash; 20:00</p>
+          <p class="mt-1 text-sm leading-relaxed text-ink-600"><a href="tel:+923001234567" class="font-medium text-ink-900 hover:text-gold-700">+92 303 4427651</a><br><time datetime="11:00">11:00</time> &ndash; <time datetime="20:00">20:00</time>, Mon&ndash;Sat</p>
         </div>
       </article>
       <article class="reveal card flex items-start gap-4 p-6">
@@ -175,7 +175,7 @@
           <div class="grid gap-5 sm:grid-cols-2">
             <div>
               <label for="contact-name" class="field-label">Full name <span class="text-red-500">*</span></label>
-              <input id="contact-name" name="name" type="text" class="field" placeholder="e.g. Ayesha Khan" autocomplete="name" minlength="2" required>
+              <input id="contact-name" name="name" type="text" class="field" placeholder="e.g. Ayesha Babar" autocomplete="name" minlength="2" required>
               <p class="field-error hidden" data-error-for="name"></p>
             </div>
             <div>
@@ -268,9 +268,10 @@
 
   <section class="pb-16 sm:pb-20" aria-label="Showroom location">
     <div class="container-x">
-      <div class="reveal overflow-hidden rounded-[2rem] border border-ink-100 shadow-soft">
+      <figure class="reveal overflow-hidden rounded-[2rem] border border-ink-100 shadow-soft">
         <iframe title="Map showing the Aurelia Jewels showroom in Gulberg III, Lahore" src="https://www.google.com/maps?q=Gulberg+III+Lahore+Pakistan&amp;output=embed" class="h-80 w-full sm:h-96" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-      </div>
+        <figcaption class="sr-only">Aurelia Jewels showroom location in Gulberg III, Lahore</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -338,7 +339,7 @@
       </ul>
     </nav>
 
-    <div class="lg:col-span-4">
+    <address class="lg:col-span-4 not-italic">
       <h2 class="font-sans text-xs font-semibold uppercase tracking-[0.22em] !text-white">Visit &amp; contact</h2>
       <ul class="mt-5 space-y-4 text-sm">
         <li class="flex gap-3"><svg class="size-5 shrink-0 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-pin"/></svg><span>118 Heritage Arcade, Gulberg III,<br>Lahore 54660, Pakistan</span></li>
@@ -346,7 +347,7 @@
         <li class="flex gap-3"><svg class="size-5 shrink-0 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:ayeshababar941@gmail.com" class="transition hover:text-gold-300">ayeshababar941@gmail.com</a></li>
         <li class="flex gap-3"><svg class="size-5 shrink-0 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-clock"/></svg><span>Mon&ndash;Sat: 11:00 &ndash; 20:00<br>Sunday: by appointment</span></li>
       </ul>
-    </div>
+    </address>
   </div>
 
   <div class="border-t border-ink-800">

@@ -66,15 +66,17 @@
           </p>
         </div>
 
-        <div class="relative hidden min-h-[34rem] lg:block">
-          <img src="assets/images/ring-flowers.jpg" alt="Diamond ring in an open box surrounded by magenta flowers" class="absolute inset-0 size-full object-cover" fetchpriority="high">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/30 to-ink-950/10"></div>
-          <div class="absolute inset-x-0 bottom-0 p-10">
-            <span class="badge border border-gold-400/40 bg-gold-400/10 text-gold-300">{{icon:sparkles size-3.5}} Member benefits</span>
-            <blockquote class="mt-4 font-serif text-2xl leading-snug text-white">&ldquo;Every piece arrived exactly as promised &mdash; and the aftercare has been wonderful.&rdquo;</blockquote>
-            <p class="mt-3 text-sm text-ink-300">Ayesha K., client since 2021</p>
-          </div>
-        </div>
+        <aside class="relative hidden min-h-[34rem] lg:block" aria-label="Client testimonial">
+          <figure class="absolute inset-0">
+            <img src="assets/images/ring-flowers.jpg" alt="Diamond ring in an open box surrounded by magenta flowers" class="absolute inset-0 size-full object-cover" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/30 to-ink-950/10"></div>
+            <figcaption class="absolute inset-x-0 bottom-0 p-10">
+              <span class="badge border border-gold-400/40 bg-gold-400/10 text-gold-300">{{icon:sparkles size-3.5}} Member benefits</span>
+              <blockquote class="mt-4 font-serif text-2xl leading-snug text-white">&ldquo;Every piece arrived exactly as promised &mdash; and the aftercare has been wonderful.&rdquo;</blockquote>
+              <p class="mt-3 text-sm text-ink-300">Ayesha K., client since <time datetime="2021">2021</time></p>
+            </figcaption>
+          </figure>
+        </aside>
       </div>
 
       <ul class="mx-auto mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">

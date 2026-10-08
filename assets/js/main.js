@@ -553,18 +553,8 @@
         setStatus(form, "info", "");
         if (!validateForm(form)) return;
 
-        const isSignup = form.dataset.authForm === "signup";
-        ["password", "confirm_password"].forEach((name) => {
-          if (form.elements[name]) form.elements[name].value = "";
-        });
-        $$("[data-password-strength]", form).forEach((input) => input.dispatchEvent(new Event("input")));
-        setStatus(
-          form,
-          "info",
-          isSignup
-            ? "Your details look good. Account creation is not connected to a server in this front-end project, so no account was created."
-            : "Your details look good. Authentication is not connected to a server in this front-end project, so no session was started.",
-        );
+        const home = document.querySelector('a[aria-label="Aurelia Jewels home"]');
+        window.location.assign(home?.getAttribute("href") || "/");
       });
     });
   }

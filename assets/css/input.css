@@ -40,8 +40,7 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
+    @apply scroll-smooth scroll-pt-24 motion-reduce:scroll-auto;
   }
 
   body {
@@ -106,8 +105,7 @@
   }
 
   .nav-link::after {
-    content: "";
-    @apply absolute inset-x-0 -bottom-0.5 h-0.5 origin-left scale-x-0 bg-gold-500 transition-transform duration-300;
+    @apply absolute inset-x-0 -bottom-0.5 h-0.5 origin-left scale-x-0 bg-gold-500 transition-transform duration-300 content-[''];
   }
 
   .nav-link:hover::after,
@@ -167,10 +165,6 @@
     @apply flex cursor-pointer list-none items-center justify-between gap-4 text-left font-serif text-lg text-ink-900;
   }
 
-  .faq-item summary::-webkit-details-marker {
-    display: none;
-  }
-
   .faq-item[open] summary svg {
     @apply rotate-180;
   }
@@ -178,34 +172,12 @@
   .faq-item summary svg {
     @apply size-5 shrink-0 text-gold-600 transition-transform duration-200;
   }
-}
-
-.js .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s ease;
-}
-
-.js .reveal.is-visible {
-  opacity: 1;
-  transform: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
 
   .js .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
+    @apply translate-y-[18px] opacity-0 transition duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none;
   }
 
-  * {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+  .js .reveal.is-visible {
+    @apply translate-y-0 opacity-100;
   }
 }

@@ -144,7 +144,11 @@
 
           const img = document.createElement("img");
           const rootPrefix = document.body?.dataset.root ?? "";
-          img.src = item.img?.startsWith("http") || item.img?.startsWith("../") ? item.img : `${rootPrefix}${item.img}`;
+          const src = item.img || "";
+          img.src =
+            /^(data:|https?:|blob:)/i.test(src) || src.startsWith("../") || src.startsWith("/")
+              ? src
+              : `${rootPrefix}${src}`;
           img.alt = "";
           img.className = "size-20 shrink-0 rounded-xl object-cover";
 

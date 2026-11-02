@@ -8,9 +8,13 @@
     { "source": "/contact.html", "destination": "/src/pages/contact.html", "permanent": true },
     { "source": "/signin.html", "destination": "/src/pages/signin.html", "permanent": true },
     { "source": "/signup.html", "destination": "/src/pages/signup.html", "permanent": true },
+    { "source": "/catalogue.html", "destination": "/src/pages/catalogue.html", "permanent": true },
+    { "source": "/admin.html", "destination": "/src/pages/admin.html", "permanent": true },
     { "source": "/pages/about.html", "destination": "/src/pages/about.html", "permanent": true },
     { "source": "/pages/contact.html", "destination": "/src/pages/contact.html", "permanent": true },
     { "source": "/pages/signin.html", "destination": "/src/pages/signin.html", "permanent": true },
-    { "source": "/pages/signup.html", "destination": "/src/pages/signup.html", "permanent": true }
+    { "source": "/pages/signup.html", "destination": "/src/pages/signup.html", "permanent": true },
+    { "source": "/pages/catalogue.html", "destination": "/src/pages/catalogue.html", "permanent": true },
+    { "source": "/pages/admin.html", "destination": "/src/pages/admin.html", "permanent": true }
   ]
 }

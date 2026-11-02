@@ -15,7 +15,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script>document.documentElement.classList.add("js");</script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body class="flex min-h-screen flex-col" data-root="">
@@ -352,41 +351,6 @@
     </div>
   </section>
 
-  <section id="api-jewellery" class="section bg-sand" aria-labelledby="api-heading" data-api-limit="8">
-    <div class="container-x">
-      <div class="reveal flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p class="eyebrow">Live jewellery API</p>
-          <h2 id="api-heading" class="section-title mt-3">From the web to your bag</h2>
-          <p id="api-status" class="mt-2 text-sm text-ink-500" role="status" aria-live="polite">Loading jewellery…</p>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <button type="button" id="api-refresh" class="btn btn-outline">
-            <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-refresh"/></svg>
-            Refresh
-          </button>
-          <a href="src/pages/catalogue.html#trending" class="btn btn-dark">View all on Shop</a>
-        </div>
-      </div>
-
-      <div id="api-loading" class="mt-12 hidden rounded-2xl border border-ink-100 bg-white px-6 py-12 text-center">
-        <span class="mx-auto grid size-12 place-items-center rounded-full bg-gold-50 text-gold-600">
-          <svg class="size-6 animate-pulse" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-sparkles"/></svg>
-        </span>
-        <p class="mt-4 font-serif text-xl text-ink-900">Fetching jewellery catalogue…</p>
-        <p class="mt-2 text-sm text-ink-500">Mejuri jewellery API via Axios GET — hundreds of products.</p>
-      </div>
-
-      <div id="api-error" class="mt-12 hidden rounded-2xl border border-red-200 bg-red-50 px-6 py-8 text-center text-red-800" role="alert"></div>
-
-      <p id="api-empty" class="mt-12 hidden rounded-2xl border border-dashed border-ink-200 bg-white px-6 py-10 text-center text-ink-500">
-        No jewellery returned from the APIs right now. Please refresh.
-      </p>
-
-      <div id="api-grid" class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"></div>
-    </div>
-  </section>
-
   <section class="section bg-ivory" aria-labelledby="bridal-title">
     <div class="container-x grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
       <figure class="reveal relative">
@@ -602,6 +566,5 @@
 </button>
 
 <script src="assets/js/main.js" defer></script>
-<script src="assets/js/api-gallery.js" defer></script>
 </body>
 </html>

@@ -130,11 +130,7 @@
           <li class="text-gold-300" aria-current="page">Shop</li>
         </ol>
       </nav>
-      <p class="eyebrow mt-8 !text-gold-300">Online boutique</p>
-      <h1 id="catalogue-title" class="mx-auto mt-3 max-w-3xl text-4xl leading-tight !text-white sm:text-5xl lg:text-6xl">Shop jewellery</h1>
-      <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink-300 sm:text-lg">
-        Live jewellery from our public API. Products you add in Admin also appear here instantly.
-      </p>
+      <h1 id="catalogue-title" class="mx-auto mt-8 max-w-3xl text-4xl leading-tight !text-white sm:text-5xl lg:text-6xl">Shop jewellery</h1>
       <div class="mx-auto mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-ink-300">
         <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2"><svg class="size-4 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bag"/></svg> Add to bag</span>
         <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2"><svg class="size-4 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-truck"/></svg> Insured delivery</span>
@@ -154,16 +150,9 @@
     data-include-admin="true"
   >
     <div class="container-x">
-      <div class="reveal flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p class="eyebrow">Shop collection</p>
-          <h2 id="api-heading" class="section-title mt-3">Jewellery for sale</h2>
-          <p id="api-status" class="mt-2 text-sm text-ink-500" role="status" aria-live="polite">Loading jewellery…</p>
-        </div>
-        <button type="button" id="api-refresh" class="btn btn-outline">
-          <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-refresh"/></svg>
-          Refresh collection
-        </button>
+      <div class="reveal">
+        <p class="eyebrow">Shop collection</p>
+        <h2 id="api-heading" class="section-title mt-3">Jewellery for sale</h2>
       </div>
 
       <div id="api-loading" class="mt-12 hidden rounded-2xl border border-ink-100 bg-white px-6 py-12 text-center">

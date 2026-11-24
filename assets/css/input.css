@@ -181,3 +181,95 @@
     @apply translate-y-0 opacity-100;
   }
 }
+
+/* Zara-style header: transparent at the top, frosted once scrolled.
+   Unlayered on purpose so these rules win over utility classes. */
+.site-header.is-scrolled {
+  border-color: var(--color-ink-100);
+  background-color: rgb(250 247 242 / 0.9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px -12px rgb(26 24 21 / 0.18);
+}
+
+.site-header.is-on-dark .nav-link {
+  color: rgb(255 255 255 / 0.9);
+}
+
+.site-header.is-on-dark .nav-link:hover,
+.site-header.is-on-dark .nav-link.is-active {
+  color: var(--color-gold-300);
+}
+
+.site-header.is-on-dark .nav-link::after {
+  background-color: var(--color-gold-400);
+}
+
+.site-header.is-on-dark a[aria-label="Aurelia Jewels home"] > span:last-child {
+  color: #fff;
+}
+
+.site-header.is-on-dark a[aria-label="Aurelia Jewels home"] > span:last-child > span {
+  color: var(--color-gold-300);
+}
+
+.site-header.is-on-dark #cart-open,
+.site-header.is-on-dark #menu-toggle {
+  border-color: rgb(255 255 255 / 0.35);
+  background-color: rgb(255 255 255 / 0.08);
+  color: #fff;
+}
+
+.site-header.is-on-dark #cart-open:hover,
+.site-header.is-on-dark #menu-toggle:hover {
+  border-color: var(--color-gold-400);
+  color: var(--color-gold-300);
+}
+
+.site-header.is-on-dark .btn-gold {
+  background-color: var(--color-gold-400);
+  color: var(--color-ink-950);
+}
+
+.site-header.is-on-dark .btn-gold:hover {
+  background-color: var(--color-gold-300);
+}
+
+/* Left sidebar content offset */
+.pl-sidebar {
+  padding-left: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .pl-sidebar {
+    padding-left: 5rem;
+  }
+}
+
+/* Sidebar nav links as vertical text */
+aside nav[aria-label="Navigation"] {
+  @apply flex flex-col items-center gap-6 lg:gap-8;
+}
+
+aside nav[aria-label="Navigation"] .nav-link {
+  @apply text-center text-xs font-medium text-ink-700 lg:text-sm;
+  @apply relative py-2 transition hover:text-gold-700;
+}
+
+aside nav[aria-label="Navigation"] .nav-link::after {
+  @apply absolute inset-x-0 -bottom-0.5 h-0.5 origin-left scale-x-0 bg-gold-500 transition-transform duration-300 content-[''];
+}
+
+aside nav[aria-label="Navigation"] .nav-link:hover::after,
+aside nav[aria-label="Navigation"] .nav-link.is-active::after {
+  @apply scale-x-100;
+}
+
+aside nav[aria-label="Navigation"] .nav-link.is-active {
+  @apply text-gold-700;
+}
+
+/* Sidebar shadow on scroll (Zara-style) */
+aside.is-scrolled {
+  box-shadow: -4px 0 20px -8px rgb(26 24 21 / 0.12);
+}

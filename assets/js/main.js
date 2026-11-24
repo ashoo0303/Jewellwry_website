@@ -66,11 +66,32 @@
     const header = $("#site-header");
     const toggle = $("#menu-toggle");
     const menu = $("#mobile-menu");
+    const sidebar = document.querySelector("aside[aria-label='Sidebar navigation']");
 
     if (header) {
-      const onScroll = () => header.classList.toggle("shadow-soft", window.scrollY > 8);
+      const hero = document.querySelector("main > section");
+      const onDarkPage = document.querySelector("main")?.dataset.active === "home";
+      let darkLimit = 8;
+      const measure = () => {
+        darkLimit =
+          onDarkPage && hero
+            ? hero.offsetTop + hero.offsetHeight - header.offsetHeight
+            : 8;
+      };
+      measure();
+      const onScroll = () => {
+        const y = window.scrollY;
+        const solid = y > darkLimit;
+        header.classList.toggle("is-scrolled", solid);
+        header.classList.toggle("is-on-dark", !solid && onDarkPage);
+        if (sidebar) sidebar.classList.toggle("is-scrolled", solid);
+      };
       onScroll();
       window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", () => {
+        measure();
+        onScroll();
+      });
     }
 
     if (!toggle || !menu) return;

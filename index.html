@@ -107,7 +107,7 @@
 </aside>
 
 <header id="site-header" class="sticky top-0 z-50 border-b border-transparent transition-[background-color,border-color,box-shadow] duration-300">
-  <nav class="container-x flex h-16 items-center justify-between gap-4 pr-16 lg:h-20 lg:pr-20" aria-label="Primary">
+  <nav class="container-x flex h-14 items-center justify-between gap-4 pr-16 lg:h-16 lg:pr-20" aria-label="Primary">
     <div class="ml-auto">
       <button type="button" id="menu-toggle" class="grid size-11 place-items-center rounded-full border border-ink-200 bg-white text-ink-800 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
         <span class="menu-open"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg></span>
@@ -147,20 +147,20 @@
     <div class="pointer-events-none absolute -left-40 top-0 size-[32rem] rounded-full bg-gold-500/20 blur-3xl" aria-hidden="true"></div>
     <div class="pointer-events-none absolute -bottom-40 right-0 size-[28rem] rounded-full bg-gold-700/20 blur-3xl" aria-hidden="true"></div>
 
-    <div class="container-x has-sidebar relative grid items-center gap-12 py-16 pr-16 sm:py-20 lg:grid-cols-2 lg:gap-8 lg:py-24 lg:pr-20">
-      <div class="reveal">
+    <div class="container-x has-sidebar relative grid items-center gap-12 py-1 pr-16 sm:py-2 lg:grid-cols-2 lg:gap-8 lg:py-3 lg:pr-20">
+      <div class="reveal hero-child-1">
         <span class="badge border border-gold-400/40 bg-gold-400/10 text-gold-300"><svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-sparkles"/></svg> New season collection</span>
-        <h1 id="hero-title" class="mt-6 text-4xl leading-[1.1] !text-white sm:text-5xl lg:text-6xl">
+        <h1 id="hero-title" class="hero-child-2 mt-6 text-4xl leading-[1.1] !text-white sm:text-5xl lg:text-6xl">
           Jewellery that tells <span class="italic text-gold-300">your story</span>
         </h1>
-        <p class="mt-6 max-w-xl text-base leading-relaxed text-ink-300 sm:text-lg">
+        <p class="hero-child-3 mt-6 max-w-xl text-base leading-relaxed text-ink-300 sm:text-lg">
           Hallmarked gold, certified diamonds and lustrous pearls handcrafted by master artisans and delivered to your door, fully insured.
         </p>
-        <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+        <div class="hero-child-4 mt-9 flex flex-col gap-3 sm:flex-row">
           <a href="src/pages/catalogue.html" class="btn btn-gold">Shop the collection <svg class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
           <a href="src/pages/contact.html" class="btn btn-outline-light">Book a private viewing</a>
         </div>
-        <dl class="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
+        <dl class="hero-child-5 mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
           <div>
             <dt class="text-xs uppercase tracking-wider text-ink-400">Designs</dt>
             <dd class="mt-1 font-serif text-2xl text-white">1,200+</dd>
@@ -176,10 +176,10 @@
         </dl>
       </div>
 
-      <figure class="reveal relative mx-auto w-full max-w-lg lg:max-w-none">
+      <figure class="hero-child-6 reveal relative mx-auto w-full max-w-lg lg:max-w-none">
         <div class="relative overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
           <img src="assets/images/hero-necklace.jpg" alt="Hallmarked yellow gold lattice necklace with matching drop earrings on a black display" class="aspect-[4/5] w-full object-cover" width="1200" height="1500" fetchpriority="high">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink-950/50 via-transparent to-transparent"></div>
+          <div class="absolute inset-0 animate-gradient-overlay bg-gradient-to-t from-ink-950/50 via-transparent to-transparent"></div>
         </div>
         <div class="absolute -bottom-5 left-4 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-soft sm:-left-6">
           <span class="grid size-10 place-items-center rounded-full bg-gold-50 text-gold-600"><svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check-badge"/></svg></span>

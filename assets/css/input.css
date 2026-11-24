@@ -273,3 +273,81 @@ aside nav[aria-label="Navigation"] .nav-link.is-active {
 aside.is-scrolled {
   box-shadow: -4px 0 20px -8px rgb(26 24 21 / 0.12);
 }
+
+/* Elegant gradient overlay animation */
+@keyframes gradient-shift {
+  0% {
+    opacity: 0.3;
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.6;
+    background-position: 50% 50%;
+    transform: scale(1.05);
+  }
+  50% {
+    opacity: 0.8;
+    background-position: 100% 50%;
+    transform: scale(1.1);
+  }
+  75% {
+    opacity: 0.6;
+    background-position: 50% 50%;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.3;
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+}
+
+.animate-gradient-overlay {
+  animation: gradient-shift 6s ease-in-out infinite;
+  background-size: 300% 300%;
+  will-change: transform, opacity, background-position;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.animate-gradient-overlay:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
+  animation-play-state: paused;
+}
+
+/* Hero section children slide-in from right */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-child-1 {
+  animation: slide-in-right 0.8s ease-out 0.1s both;
+}
+
+.hero-child-2 {
+  animation: slide-in-right 0.8s ease-out 0.3s both;
+}
+
+.hero-child-3 {
+  animation: slide-in-right 0.8s ease-out 0.5s both;
+}
+
+.hero-child-4 {
+  animation: slide-in-right 0.8s ease-out 0.7s both;
+}
+
+.hero-child-5 {
+  animation: slide-in-right 0.8s ease-out 0.9s both;
+}
+
+.hero-child-6 {
+  animation: slide-in-right 0.8s ease-out 1.1s both;
+}
